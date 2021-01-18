@@ -1,0 +1,241 @@
+/* 
+ Theme Name:   Twenty Twenty Child
+ Template:     twentytwenty
+
+ Description:  Twenty Twenty Child Theme
+ Author:       Барсуков Н.М.
+*/
+
+/*Отлкючение коммантарий из админ панели*/
+#menu-comments {
+	display: none;
+}
+
+body {
+	background: #f5efe0;
+	box-sizing: border-box;
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Arial", Helvetica, sans-serif;
+	font-size: 1.8rem;
+	letter-spacing: -0.015em;
+	text-align: left;
+}
+
+.header-titles {
+	display: contents;
+}
+
+.header-titles-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    text-align: center;
+}
+
+body:not(.enable-search-modal) .header-titles-wrapper {
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    text-align: center;
+}
+
+#site-header {
+    background-color: #7671 !important;
+}
+
+.site-description{
+    color: black;
+}
+
+hr.wp-block-separator {
+    color: transparent !important;
+}
+
+.entry-content {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+}
+
+.entry-content hr,
+hr.styled-separator {
+	/*linear-gradient(to left, currentColor calc(50% - 16px), transparent calc(50% - 16px), transparent calc(50% + 16px), currentColor calc(50% + 16px));*/
+	background: linear-gradient(to left, 
+				#6FBF4C calc(50% - 50px), 
+				transparent calc(50% - 50px), 
+				transparent calc(50% + 50px), 
+				#6D6E72 calc(50% + 50px));
+	background-size: contain;
+	background-color: transparent !important;
+	border: none;
+	height: 4rem;
+	overflow: hidden;
+	position: relative;
+}
+
+/*Отключение before*/
+.entry-content hr::before,
+hr.styled-separator::before{
+	content: none;
+	justify-self: unset;
+	display: none;
+	border: none !important;
+	height: 0;
+	width: 0;
+	position: absolute;
+
+	transform: none
+}
+
+.entry-content hr::after,
+hr.styled-separator::after {
+	content: "";
+	background: url('assets/img/svg_1.png') no-repeat center;
+	background-size: contain;
+	justify-self: center;
+	display: block;
+	border: none !important;
+	height: inherit;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	position: absolute;
+
+	transform: rotate(0deg);
+	right: 0;
+    top: 0;
+}
+
+
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 58rem;
+    width: calc(100% - 4rem);
+}
+
+.wp-block-spacer{
+    background-color: transparent;
+}
+
+
+/* ---------------------------------------------------------------------------*/
+/* Template: Full Width None Header
+/* -------------------------------------------------------------------------- */
+
+body.template-full-width-none-header .entry-content > *:first-child {
+	margin-top: 2rem;
+}
+
+body.template-full-width-none-header .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+body.template-full-width-none-header [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 120rem;
+}
+
+body.template-full-width-none-header .entry-content .alignleft,
+body.template-full-width-none-header .entry-content .alignright {
+	position: static;
+}
+
+body.template-full-width-none-header .entry-content .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+	position: static;
+}
+
+body.template-full-width-none-header .entry-content > .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 2rem;
+	position: static;
+}
+
+body.template-full-width-none-header .entry-content .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+	position: static;
+}
+
+body.template-full-width-none-header .entry-content > .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
+body.template-full-width-none-header [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 2rem;
+	position: static;
+}
+
+/* ---------------------------------------------------------------------------*/
+/* Template: Full Width None Header END
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/* template full chat
+/ -------------------------------------------------------------------------- */
+
+body.template-chat .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+body.template-chat [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 120rem;
+}
+
+body.template-chat .entry-content .alignleft,
+body.template-chat .entry-content .alignright {
+	position: static;
+}
+
+body.template-chat .entry-content .alignleft,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > .alignleft,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignleft,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+	position: static;
+}
+
+body.template-chat .entry-content > .alignleft,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 2rem;
+	position: static;
+}
+
+body.template-chat .entry-content .alignright,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > .alignright,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignright,
+body.template-chat [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+	position: static;
+}
+
+body.template-chat .entry-content > .alignright,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
+body.template-chat [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 2rem;
+	position: static;
+}
+
+/* -------------------------------------------------------------------------- */
+/* template full chat END
+/ -------------------------------------------------------------------------- */
+
